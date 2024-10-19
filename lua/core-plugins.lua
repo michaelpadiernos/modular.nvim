@@ -1,10 +1,26 @@
 require('lazy').setup({
-    'tpope/vim-sleuth',
 
-    { import = 'mini' },
-    { import = 'custom' },
+    -- Themes
+    { enabled = true,   'olimorris/onedarkpro.nvim' },
+
+    -- Themes: configs
+    { import = 'themes' },
+
+    -- Plugins
+    { enabled = false,  'tpope/vim-sleuth' },
+
+    -- Plugins: configs
+    { import = 'plugins.mini' },
+    { import = 'plugins.contrib' },
+--     { import = 'plugins.vim' },
+
+
+    -- Sources
+    { enabled = false, 'petertriho/cmp-git' }
+    { enabled = false, 'fbuchlak/cmp-symfony-router'}
+
+    -- Sources: configs
 --     { import = 'sources' },
---     { import = 'themes' },
 },
 {
   ui = {
