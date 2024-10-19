@@ -6,5 +6,6 @@ A starting point for Neovim inspired by [nvim-lua/kickstart.nvim](https://github
 in combination with [echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim) that is:
 
 * Small
+* Minimal
 * Modular
-* Completely Documented
+* Geared toward [Drupal](https://drupal.org) development
