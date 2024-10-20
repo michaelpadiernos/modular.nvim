@@ -1,6 +1,5 @@
 return {
     "FeiyouG/commander.nvim",
-    enabled = true,
     dependencies = {
         "nvim-telescope/telescope.nvim"
     },

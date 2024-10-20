@@ -1,1 +1,7 @@
-return { 'echasnovski/mini.sessions', version = false, enabled = true }
+return {
+    'echasnovski/mini.sessions',
+    version = false,
+    config = function()
+        -- config
+    end
+}

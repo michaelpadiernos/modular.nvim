@@ -1,6 +1,5 @@
 return {
     'wilfreddenton/history.nvim',
-    enabled = true,
     dependencies = {
         'nvim-lua/plenary.nvim'
     },

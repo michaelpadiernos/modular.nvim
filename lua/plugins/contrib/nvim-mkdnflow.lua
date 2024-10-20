@@ -1,6 +1,5 @@
 return {
     'jakewvincent/mkdnflow.nvim',
-    enabled = true,
     config = function()
         require('mkdnflow').setup({
             modules = {

@@ -1,6 +1,5 @@
 return {
     'jlesquembre/nterm.nvim',
-    enabled = true,
     dependencies = {
         'Olical/aniseed'
     },

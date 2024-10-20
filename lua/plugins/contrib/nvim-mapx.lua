@@ -1,6 +1,5 @@
 return {
     "b0o/mapx.nvim",
-    enabled = false,
     config = function()
         mapx.group({ prefix = "<leader>t" }, "LSP", function()
             mapx.group({ prefix = "g" }, "Goto", function()

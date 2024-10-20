@@ -1,6 +1,5 @@
 return {
     "folke/noice.nvim",
-    enabled = true,
     event = "VeryLazy",
     opts = {
          lsp = {
@@ -46,6 +45,18 @@ return {
                     ["vim.lsp.util.stylize_markdown"] = true,
                     ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
                 },
+            },
+            views = {
+                cmdline_popup = {
+                    border = {
+                        style = 'none',
+                    },
+                },
+                hover = {
+                    border = {
+                        style = 'none',
+                    }
+                }
             },
             -- you can enable a preset for easier configuration
             presets = {

@@ -1,6 +1,5 @@
 return {
     "jdrupal-dev/drupal.nvim",
-    enabled = true,
     dependencies = {
         "nvim-lua/plenary.nvim",
         {

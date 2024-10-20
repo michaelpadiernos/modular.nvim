@@ -1,6 +1,5 @@
 return {
     'hood/popui.nvim',
-    enabled = true,
     config = function()
         vim.ui.select = require"popui.ui-overrider"
         vim.ui.input = require"popui.input-overrider"
