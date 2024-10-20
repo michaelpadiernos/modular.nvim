@@ -5,8 +5,6 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
 
-        vim.api.nvim_set_hl(0, 'NeominimapBorder',  { fg = '#000000' })
-
         require('github-theme').setup({
             options = {
                 transparent = true,
