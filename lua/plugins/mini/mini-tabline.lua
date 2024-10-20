@@ -1,6 +1,6 @@
 return {
     'echasnovski/mini.tabline',
-    enabled = false,
+    enabled = true,
     version = false,
     config = function()
         require('mini.tabline').setup {

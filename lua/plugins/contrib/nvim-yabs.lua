@@ -1,0 +1,3 @@
+return {
+    'shadowofseaice/yabs.nvim',
+}

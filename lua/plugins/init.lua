@@ -1,6 +1,4 @@
 return( {
-    { enabled = false,  'romgrk/barbar.nvim' },
-    { enabled = false,  'akinsho/bufferline.nvim' },
     { enabled = true,   'norcalli/nvim-colorizer.lua' },
     { enabled = true,   'FeiyouG/commander.nvim' },
     { enabled = true,   'sindrets/diffview.nvim' },
@@ -13,7 +11,6 @@ return( {
     { enabled = true,   'lewis6991/gitsigns.nvim' },
     { enabled = true,   'ThePrimeagen/harpoon' },
     { enabled = true,   'wilfreddenton/history.nvim' },
-    { enabled = true,   'matbme/JABS.nvim' },
     { enabled = true,   'kdheepak/lazygit.nvim' },
     { enabled = true,   'vhyrro/luarocks.nvim' },
     { enabled = false,  'b0o/mapx.nvim' },
@@ -41,9 +38,9 @@ return( {
     { enabled = true,   'filipdutescu/renamer.nvim' },
     { enabled = true,   'tiagovla/scope.nvim' },
     { enabled = true,   'LintaoAmons/scratch.nvim' },
+    { enabled = true,   'dstein64/nvim-scrollview' }
     { enabled = true,   'ChiliConSql/neovim-stylus' },
     { enabled = true,   'kylechui/nvim-surround' },
-    { enabled = false,  'nanozuki/tabby.nvim' },
     { enabled = true,   'nvim-telescope/telescope-file-browser.nvim' },
     { enabled = true,   'HUAHUAI23/telescope-session.nvim' },
     { enabled = true,   'nvim-telescope/telescope-ui-select.nvim' },
@@ -53,4 +50,5 @@ return( {
     { enabled = true,   'folke/trouble.nvim' },
     { enabled = true,   'jiaoshijie/undotree' },
     { enabled = true,   'tanvirtin/vgit.nvim' },
+    { enabled = true,   'shadowofseaice/yabs.nvim' }
 } )

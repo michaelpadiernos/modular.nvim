@@ -8,6 +8,7 @@ require('lazy').setup({
     { import = 'plugins.mini' },
     { import = 'plugins.contrib' },
 --     { import = 'plugins.vim' },
+--     { import = 'plugins.drupal' },
 
     -- Themes
     { enabled = true,  'projekt0n/github-nvim-theme' },
