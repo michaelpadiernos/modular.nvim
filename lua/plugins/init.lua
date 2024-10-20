@@ -38,7 +38,7 @@ return( {
     { enabled = true,   'filipdutescu/renamer.nvim' },
     { enabled = true,   'tiagovla/scope.nvim' },
     { enabled = true,   'LintaoAmons/scratch.nvim' },
-    { enabled = true,   'dstein64/nvim-scrollview' }
+    { enabled = true,   'dstein64/nvim-scrollview' },
     { enabled = true,   'ChiliConSql/neovim-stylus' },
     { enabled = true,   'kylechui/nvim-surround' },
     { enabled = true,   'nvim-telescope/telescope-file-browser.nvim' },
@@ -50,5 +50,5 @@ return( {
     { enabled = true,   'folke/trouble.nvim' },
     { enabled = true,   'jiaoshijie/undotree' },
     { enabled = true,   'tanvirtin/vgit.nvim' },
-    { enabled = true,   'shadowofseaice/yabs.nvim' }
+    { enabled = true,   'shadowofseaice/yabs.nvim' },
 } )
