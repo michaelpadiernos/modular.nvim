@@ -24,8 +24,9 @@ require('lazy').setup({
     { import = 'lsp' },
 
     -- Completions
-    { enabled = false, 'petertriho/cmp-git' },
-    { enabled = false, 'fbuchlak/cmp-symfony-router'},
+    { enabled = true,	'hrsh7th/nvim-cmp'},
+    { enabled = true,  'petertriho/cmp-git' },
+    { enabled = true,  'fbuchlak/cmp-symfony-router'},
 
     -- Completions: configs
     { import = 'completions' },
