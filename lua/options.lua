@@ -1,14 +1,14 @@
-vim.g.mapleader				= ' '
+vim.g.mapleader				    = ' '
 
-vim.opt.number 				= true
+vim.opt.number 				    = true
 vim.opt.relativenumber 			= true
 
-vim.o.backup       			= false          -- Don't store backup
-vim.o.mouse        			= 'a'            -- Enable mouse
-vim.o.mousescroll  			= 'ver:25,hor:6' -- Customize mouse scroll
-vim.o.switchbuf    			= 'usetab'       -- Use already opened buffers when switching
-vim.o.writebackup  			= false          -- Don't store backup
-vim.o.undofile     			= true           -- Enable persistent undo
+vim.o.backup       			    = false          -- Don't store backup
+vim.o.mouse        			    = 'a'            -- Enable mouse
+vim.o.mousescroll  			    = 'ver:25,hor:6' -- Customize mouse scroll
+vim.o.switchbuf    			    = 'usetab'       -- Use already opened buffers when switching
+vim.o.writebackup  			    = false          -- Don't store backup
+vim.o.undofile     			    = true           -- Enable persistent undo
 
 vim.cmd('filetype plugin indent on') -- Enable all filetype plugins
 
@@ -34,11 +34,11 @@ vim.o.wrap          			= false     -- Display long lines as just one line
 
 if vim.fn.has('nvim-0.9') == 1 then
   vim.opt.shortmess:append('C') -- Don't show "Scanning..." messages
-  vim.o.splitkeep = 'screen'    -- Reduce scroll during window split
+  vim.o.splitkeep               = 'screen'    -- Reduce scroll during window split
 end
 
 vim.o.autoindent    			= true     -- Use auto indent
-vim.o.expandtab     			= true     -- Convert tabs to spaces
+vim.o.expandtab     			= false    -- Convert tabs to spaces
 vim.o.formatoptions 			= 'rqnl1j' -- Improve comment editing
 vim.o.ignorecase    			= true     -- Ignore case when searching (use `\C` to force not doing that)
 vim.o.incsearch     			= true     -- Show search results while typing
@@ -46,21 +46,21 @@ vim.o.infercase     			= true     -- Infer letter cases for a richer built-in ke
 vim.o.shiftwidth    			= 2        -- Use this number of spaces for indentation
 vim.o.smartcase     			= true     -- Don't ignore case when searching if pattern has upper case
 vim.o.smartindent   			= true     -- Make indenting smart
-vim.o.tabstop       			= 2        -- Insert 2 spaces for a tab
+vim.o.tabstop       			= 4        -- Insert 2 spaces for a tab
 vim.o.virtualedit   			= 'block'  -- Allow going past the end of line in visual block mode
 
 vim.opt.iskeyword:append('-')  -- Treat dash separated words as a word text object
 
 vim.o.formatlistpat 			= [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 
-vim.o.foldmethod  = 'indent' -- Set 'indent' folding method
-vim.o.foldlevel   = 1        -- Display all folds except top ones
-vim.o.foldnestmax = 10       -- Create folds only for some number of nested levels
-vim.g.markdown_folding = 1   -- Use folding by heading in markdown files
+-- vim.o.foldmethod                = 'expr'   -- Set 'indent' folding methodi
+-- vim.o.foldlevel                 = 1        -- Display all folds except top ones
+-- vim.o.foldnestmax               = 10       -- Create folds only for some number of nested levels
+-- vim.g.markdown_folding          = 1        -- Use folding by heading in markdown files
 
-if vim.fn.has('nvim-0.10') == 1 then
-  vim.o.foldtext = ''        -- Use underlying text with its highlighting
-end
+-- if vim.fn.has('nvim-0.10') == 1 then
+--   vim.o.foldtext                = ''       -- Use underlying text with its highlighting
+-- end
 
 if vim.fn.has('nvim-0.11') == 1 then
   vim.opt.completeopt:append('fuzzy') -- Use fuzzy matching for built-in completion

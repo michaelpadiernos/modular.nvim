@@ -11,7 +11,7 @@ return {
     },
     cmd = 'NvimTreeToggle',
     keys = {
-        { '\\', ':NvimTreeToggle<CR>', desc = 'Toggle NvimTree', silent = true },
+        { '\\', ':NvimTreeFocus<CR>', desc = 'Toggle NvimTree', silent = true },
     },
     opts = {
         filesystem = {
