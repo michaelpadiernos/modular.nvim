@@ -27,7 +27,7 @@ return( {
     { enabled = true,   name = 'history',                   'wilfreddenton/history.nvim' },
     { enabled = true,	name = 'lazydev',                   'folke/lazydev.nvim' },
     { enabled = true,   name = 'lazygit',                   'kdheepak/lazygit.nvim' },
-    { enabled = true,	name = 'legendary',                 'mrjones2014/legendary.nvim' },
+    { enabled = false,	name = 'legendary',                 'mrjones2014/legendary.nvim' },
     { enabled = true,   name = 'lua-rocks',                 'vhyrro/luarocks.nvim' },
     { enabled = false,  name = 'mapx',                      'b0o/mapx.nvim' },
     { enabled = true,   name = 'markdown',                  'MeanderingProgrammer/render-markdown.nvim' },
@@ -70,5 +70,5 @@ return( {
     { enabled = true,   name = 'vgit',                      'tanvirtin/vgit.nvim' },
     { enabled = true, 	name = 'which-key',                 'folke/which-key.nvim' },
     { enabled = true,   name = 'yabs',                      'shadowofseaice/yabs.nvim' },
-  
+
 } )
