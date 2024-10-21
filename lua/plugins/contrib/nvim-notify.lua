@@ -5,5 +5,11 @@ return {
         render = "compact",
         stages = "fade",
         top_down = false,
-    }
+    },
+    config = function()
+        require('notify').setup({
+                -- config
+                background_color = '#000000',
+        })
+    end
 }

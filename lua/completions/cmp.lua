@@ -1,5 +1,5 @@
 return {
     'hrsh7th/nvim-cmp',
-    config = funciton()
+    config = function()
     end,
 }

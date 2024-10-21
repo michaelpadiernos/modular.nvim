@@ -2,8 +2,9 @@ return {
     "rcarriga/nvim-dap-ui", 
     dependencies = {
 	"mfussenegger/nvim-dap", 
-	"nvim-neotest/nvim-nio"
+	"nvim-neotest/nvim-nio",
     },
-    config = funciton()
-    end,
+    config = function()
+    end
 }
+
