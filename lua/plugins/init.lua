@@ -6,7 +6,7 @@ return( {
 
     -- Vim Modules
     { enabled = false,  name = 'vim-gitgutter',             'airblade/vim-gitgutter' },
-    { enabled = false,  name = 'vim-sleuth',                'tpope/vim-sleuth' }
+    { enabled = false,  name = 'vim-sleuth',                'tpope/vim-sleuth' },
     { enabled = false,  name = 'vim-visual-multi',          'mg979/vim-visual-multi' },
 
     -- Contrib Modules
