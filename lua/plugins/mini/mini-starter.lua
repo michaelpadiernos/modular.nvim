@@ -3,43 +3,44 @@ return {
     enabled = true,
     version = false,
     config = function()
-        require('mini.starter').setup {
-            -- Whether to open starter buffer on VimEnter. Not opened if Neovim was
-            -- started with intent to show something else.
-            autoopen = true,
+	  local starter = require('mini.starter')
+	  local items = {
+		starter.sections.builtin_actions(),
+		{ name = 'Sessions', action = ":lua require'telescope'.extensions.sessions.sessions{}", section = 'Telescope' },
+		{ name = 'Recent Files', action = ':Telescope oldfiles', section = 'Telescope' },
+		{ name = 'File Brower', action = ':Telescope file_browser', section = 'Telescope' },
+		-- starter.sections.recent_files(10, false),
+		-- starter.sections.recent_files(10, true),
+		-- Use this if you set up 'mini.sessions'
+		starter.sections.sessions(9, true),
+		-- { name = 'Addons', action = ':e ~/.config/blender/2.82/scripts/addons', section = 'Bookmarks' },
+		-- { name = 'NvimPlugs', action = ':e ~/.local/share/nvim/site/pack/packer/start', section = 'Bookmarks' },
+	  }
+	  starter.setup {
+		autoopen = true,
 
-            -- Whether to evaluate action of single active item
-            evaluate_single = false,
+		evaluate_single = false,
 
-            -- Items to be displayed. Should be an array with the following elements:
-            -- - Item: table with <action>, <name>, and <section> keys.
-            -- - Function: should return one of these three categories.
-            -- - Array: elements of these three types (i.e. item, array, function).
-            -- If `nil` (default), default items will be used (see |mini.starter|).
-            items = nil,
+		items = items,
 
-            -- Header to be displayed before items. Converted to single string via
-            -- `tostring` (use `\n` to display several lines). If function, it is
-            -- evaluated first. If `nil` (default), polite greeting will be used.
-            header = nil,
+		header = nil,
 
-            -- Footer to be displayed after items. Converted to single string via
-            -- `tostring` (use `\n` to display several lines). If function, it is
-            -- evaluated first. If `nil` (default), default usage help will be shown.
-            footer = nil,
+		footer = nil,
 
-            -- Array  of functions to be applied consecutively to initial content.
-            -- Each function should take and return content for 'Starter' buffer (see
-            -- |mini.starter| and |MiniStarter.content| for more details).
-            content_hooks = nil,
+		content_hooks = {
+		  starter.gen_hook.adding_bullet(),
+		  starter.gen_hook.indexing('all', { 
+			'Builtin actions', 
+			'Telescope', 
+			-- 'Bookmarks'
+		  }),
+		  starter.gen_hook.padding(5, 2),
+		  starter.gen_hook.aligning('left', 'top'),
+		},
 
-            -- Characters to update query. Each character will have special buffer
-            -- mapping overriding your global ones. Be careful to not add `:` as it
-            -- allows you to go into command mode.
-            query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_-.',
+		query_updaters = 'abcdefghijklmnopqrstuvwxyz0123456789_-.',
 
-            -- Whether to disable showing non-error feedback
-            silent = false,
-        }
-    end
+		silent = false,
+	  }
+  end
 }

@@ -1,4 +1,4 @@
 require 'bootstrap'
 require 'options'
--- require 'keymaps'
+require 'keymaps'
 require 'extend'
