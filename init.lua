@@ -12,7 +12,7 @@ require 'core.extend'
 
 -- user
 require 'user.options'
--- require 'user.keymaps'
+require 'user.keymaps'
 
 -- plugins
 require 'plugins.keymaps'
