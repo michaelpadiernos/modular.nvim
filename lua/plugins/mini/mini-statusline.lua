@@ -3,21 +3,25 @@ return {
     enabled = true,
     version = false,
     config = function()
-        require('mini.statusline').setup {
-            -- Content of statusline as functions which return statusline string. See
-            -- `:h statusline` and code of default contents (used instead of `nil`).
-            content = {
-                -- Content for active window
-                active = nil,
-                -- Content for inactive window(s)
-                inactive = nil,
-            },
+	  local sl = require('mini.statusline')
+        sl.setup {
+		  -- Content of statusline as functions which return statusline string. See
+		  -- `:h statusline` and code of default contents (used instead of `nil`).
+		  content = {
+			  -- Content for active window
+			  active = nil,
+			  -- Content for inactive window(s)
+			  inactive = nil,
+		  },
 
-            -- Whether to use icons by default
-            use_icons = true,
+		  -- Whether to use icons by default
+		  use_icons = vim.g.have_nerd_font,
 
-            -- Whether to set Vim's settings for statusline (make it always shown)
-            set_vim_settings = true,
+		  -- Whether to set Vim's settings for statusline (make it always shown)
+		  set_vim_settings = true,
         }
+		sl.section_location = function()
+		  return '%2l:%-2v'
+		end
     end,
 }

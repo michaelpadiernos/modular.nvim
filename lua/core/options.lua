@@ -1,4 +1,3 @@
-vim.g.mapleader				    = ' '
 
 vim.opt.number 				    = true
 vim.opt.relativenumber 			= true
@@ -11,6 +10,10 @@ vim.o.writebackup  			    = false          -- Don't store backup
 vim.o.undofile     			    = true           -- Enable persistent undo
 
 vim.cmd('filetype plugin indent on') -- Enable all filetype plugins
+
+vim.schedule(function()
+  vim.opt.clipboard 			= 'unnamedplus'
+end)
 
 vim.o.breakindent   			= true      -- Indent wrapped lines to match line start
 vim.o.colorcolumn   			= '+1'      -- Draw colored column one step to the right of desired maximum width
@@ -32,6 +35,8 @@ vim.o.termguicolors 			= true      -- Enable gui colors
 vim.o.winblend      			= 10        -- Make floating windows slightly transparent
 vim.o.wrap          			= false     -- Display long lines as just one line
 
+vim.opt.listchars 				= { tab = '» ', trail = '·', nbsp = '␣' }
+
 if vim.fn.has('nvim-0.9') == 1 then
   vim.opt.shortmess:append('C') -- Don't show "Scanning..." messages
   vim.o.splitkeep               = 'screen'    -- Reduce scroll during window split
@@ -46,8 +51,11 @@ vim.o.infercase     			= true     -- Infer letter cases for a richer built-in ke
 vim.o.shiftwidth    			= 2        -- Use this number of spaces for indentation
 vim.o.smartcase     			= true     -- Don't ignore case when searching if pattern has upper case
 vim.o.smartindent   			= true     -- Make indenting smart
-vim.o.tabstop       			= 4        -- Insert 2 spaces for a tab
+vim.o.tabstop       			= 4        -- Insert 4 spaces for a tab
 vim.o.virtualedit   			= 'block'  -- Allow going past the end of line in visual block mode
+
+vim.opt.updatetime 				= 250
+vim.opt.timeoutlen 				= 300
 
 vim.opt.iskeyword:append('-')  -- Treat dash separated words as a word text object
 
@@ -65,3 +73,5 @@ vim.o.formatlistpat 			= [[^\s*[0-9\-\+\*]\+[\.\)]*\s\+]]
 if vim.fn.has('nvim-0.11') == 1 then
   vim.opt.completeopt:append('fuzzy') -- Use fuzzy matching for built-in completion
 end
+
+vim.opt.scrolloff 				= 10

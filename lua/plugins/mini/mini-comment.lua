@@ -1,1 +1,1 @@
-return { 'echasnovski/mini.comment', version = false, enabled = true }
+return { 'echasnovski/mini.comment', version = false, enabled = true, config = function() end }

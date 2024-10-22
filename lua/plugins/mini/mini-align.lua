@@ -1,1 +1,6 @@
-return { 'echasnovski/mini.align', version = false, enabled = true }
+return {
+  'echasnovski/mini.align',
+  version = false,
+  enabled = true,
+  config = function() end,
+}

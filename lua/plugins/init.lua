@@ -1,4 +1,4 @@
-return( {
+return({
 
     -- Drupal Modules
     { enabled = true,   name = 'drupal',                    'jdrupal-dev/drupal.nvim' },
@@ -11,14 +11,15 @@ return( {
 
     -- Contrib Modules
     { enabled = true,	name = 'ale',                       'dense-analysis/ale' },
+	{ enabled = true,	name = 'autopairs',					'windwp/nvim-autopairs' },
 	{ enabled = false,	name = 'barbar',					'romgrk/barbar.nvim' },
 	{ enabled = true,   name = 'blame',                     'FabijanZulj/blame.nvim' },
 	{ enabled = false,	name = 'bufferline',				'akinsho/bufferline.nvim' },
 	{ enabled = true,   name = 'colorizer',                 'norcalli/nvim-colorizer.lua' },
     { enabled = true,   name = 'commander',                 'FeiyouG/commander.nvim' },
+	{ enabled = true,	name = 'conform',					'stevearc/conform.nvim' },
 	{ enabled = false,	name = 'ctrlspace',					'vim-ctrlspace/vim-ctrlspace' },
 	{ enabled = true,	name = 'dap',                       'mfussenegger/nvim-dap' },
-    { enabled = true,	name = 'dap-ui',                    'rcarriga/nvim-dap-ui' },
     { enabled = true,   name = 'diffview',                  'sindrets/diffview.nvim' },
     { enabled = true,   name = 'distant',                   'chipsenkbeil/distant.nvim' },
     { enabled = true,   name = 'dressing',                  'stevearc/dressing.nvim' },
@@ -28,9 +29,11 @@ return( {
     { enabled = true,   name = 'git-signs',                 'lewis6991/gitsigns.nvim' },
     { enabled = true,   name = 'harpoon',                   'ThePrimeagen/harpoon' },
     { enabled = true,   name = 'history',                   'wilfreddenton/history.nvim' },
+	{ enabled = true, 	name = 'indent-blankline',			'lukas-reineke/indent-blankline.nvim' },
     { enabled = true,	name = 'lazydev',                   'folke/lazydev.nvim' },
     { enabled = true,   name = 'lazygit',                   'kdheepak/lazygit.nvim' },
     { enabled = false,	name = 'legendary',                 'mrjones2014/legendary.nvim' },
+	{ enabled = true,	name = 'lint',						'mfussenegger/nvim-lint' },
     { enabled = true,   name = 'lua-rocks',                 'vhyrro/luarocks.nvim' },
 	{ enabled = false,	name = 'lualine',					'nvim-lualine/lualine.nvim' },
 	{ enabled = false,  name = 'mapx',                      'b0o/mapx.nvim' },
@@ -43,8 +46,7 @@ return( {
     { enabled = true,   name = 'namespace',                 'ccaglak/namespace.nvim' },
     { enabled = false,	name = 'navigator',                 'numToStr/Navigator.nvim' },
     { enabled = true,   name = 'neoclip',                   'AckslD/nvim-neoclip.lua' },
-    { enabled = false,	name = 'neodev',                    'folke/neodev.nvim' },
-    { enabled = true,   name = 'neogit',                    'NeogitOrg/neogit' },
+    { enabled = false,  name = 'neogit',                    'NeogitOrg/neogit' },
     { enabled = true,   name = 'neoscroll',                 'karb94/neoscroll.nvim' },
     { enabled = true,   name = 'noice',                     'folke/noice.nvim' },
     { enabled = true,   name = 'notify',                    'rcarriga/nvim-notify' },
@@ -67,13 +69,14 @@ return( {
     { enabled = true,   name = 'telescope-file-browser',    'nvim-telescope/telescope-file-browser.nvim' },
     { enabled = true,   name = 'telescope-scope',           'HUAHUAI23/telescope-session.nvim' },
     { enabled = true,   name = 'telescope-ui-select',       'nvim-telescope/telescope-ui-select.nvim' },
+	{ enabled = true,	name = 'todo-comments',				'folke/todo-comments.nvim' },
     { enabled = true,   name = 'tree',                      'nvim-tree/nvim-tree.lua' },
     { enabled = true,   name = 'treesitter',                'nvim-treesitter/nvim-treesitter' },
     { enabled = true,   name = 'treesj',                    'Wansmer/treesj' },
     { enabled = true,   name = 'trouble',                   'folke/trouble.nvim' },
     { enabled = true,   name = 'undotree',                  'jiaoshijie/undotree' },
     { enabled = true,   name = 'vgit',                      'tanvirtin/vgit.nvim' },
-    { enabled = false, 	name = 'which-key',                 'folke/which-key.nvim' },
+    { enabled = true, 	name = 'which-key',                 'folke/which-key.nvim' },
     { enabled = false,  name = 'yabs',                      'shadowofseaice/yabs.nvim' },
 
 } )

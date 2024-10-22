@@ -1,1 +1,1 @@
-return { 'echasnovski/mini.colors', version = false, enabled = true }
+return { 'echasnovski/mini.colors', version = false, enabled = false, config = function() end }
