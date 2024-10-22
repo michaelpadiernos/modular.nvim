@@ -1,6 +1,6 @@
 return {
   'echasnovski/mini.ai',
-  version = true,
+  version = false,
   enabled = true,
   config = function()
     require('mini.ai').setup {
