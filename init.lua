@@ -1,7 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.g.have_nerd_font = true
+nerd_font = vim.g.have_nerd_font
+nerd_font = true
 
 -- core
 require 'core.options'
