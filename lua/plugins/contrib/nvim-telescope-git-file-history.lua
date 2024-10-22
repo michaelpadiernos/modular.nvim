@@ -1,12 +1,9 @@
 return {
-  'nvim-telescope/telescope.nvim',
+  'isak102/telescope-git-file-history.nvim',
   dependencies = {
-    {
-      'isak102/telescope-git-file-history.nvim',
-      dependencies = {
-        'nvim-lua/plenary.nvim',
-        'tpope/vim-fugitive',
-      },
-    },
+    'nvim-telescope/telescope.nvim',
+    'nvim-lua/plenary.nvim',
+    'tpope/vim-fugitive',
   },
+  config = function() end,
 }
