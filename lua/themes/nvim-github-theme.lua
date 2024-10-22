@@ -17,6 +17,7 @@ return {
       },
       groups = {
         all = {
+          Normal = { bg = '#000000' },
           NeominimapBorder = { fg = '#000000' },
           WinSeparator = { fg = '#000000' },
           StatusLine = { fg = '#ffffff', bg = '#000000' },
