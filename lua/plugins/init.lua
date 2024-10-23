@@ -6,7 +6,7 @@ return {
   { enabled = true, name = 'drupal-sh', 'michaelpadiernos-forks/nvim-drupal-sh'},
 
   -- Vim Modules
-  { enabled = false, name = 'ctrlspace', 'vim-ctrlspace/vim-ctrlspace' },
+  { enabled = false, name = 'vim-ctrlspace', 'vim-ctrlspace/vim-ctrlspace' },
   { enabled = false, name = 'vim-gitgutter', 'airblade/vim-gitgutter' },
   { enabled = false, name = 'vim-sleuth', 'tpope/vim-sleuth' },
   { enabled = false, name = 'vim-visual-multi', 'mg979/vim-visual-multi' },
@@ -34,6 +34,7 @@ return {
   { enabled = false, name = 'fidget', 'j-hui/fidget.nvim' },
   { enabled = false, name = 'flash', 'folke/flash.nvim' },
   { enabled = true, name = 'git-signs', 'lewis6991/gitsigns.nvim' },
+  { enabled = false, name = 'glow', 'ellisonleao/glow.nvim' },
   { enabled = false, name = 'guess-indent', 'nmac427/guess-indent.nvim' },
   { enabled = true, name = 'harpoon', 'ThePrimeagen/harpoon' },
   { enabled = true, name = 'history', 'wilfreddenton/history.nvim' },
