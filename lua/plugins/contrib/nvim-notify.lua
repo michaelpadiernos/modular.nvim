@@ -6,7 +6,7 @@ return {
       -- config
       background_colour = '#000000',
       timeout = 3000,
-      render = 'compact',
+      render = 'wrapped_compact',
       stages = 'fade',
       top_down = false,
     }
