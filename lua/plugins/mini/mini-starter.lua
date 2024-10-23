@@ -4,6 +4,9 @@ return {
   version = false,
   config = function()
     local starter = require 'mini.starter'
+	local project = require 'project_nvim'
+	local recent_projects = project.get_recent_projects()
+
     local items = {
       starter.sections.builtin_actions(),
       -- { name = 'Sessions', action = ":lua require'telescope'.extensions.sessions.sessions{}", section = 'Telescope' },
@@ -11,6 +14,7 @@ return {
       { name = 'File Brower', action = ':Telescope file_browser', section = 'Telescope' },
       -- starter.sections.recent_files(10, false),
       starter.sections.recent_files(9, true),
+	  -- starter.sections.print(vim.inspect(recent_projects)),
       -- Use this if you set up 'mini.sessions'
       -- starter.sections.sessions(9, true),
       -- { name = 'Addons', action = ':e ~/.config/blender/2.82/scripts/addons', section = 'Bookmarks' },

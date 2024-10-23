@@ -11,6 +11,7 @@ require 'core.bootstrap'
 require 'core.extend'
 
 -- user
+require 'user.colors'
 require 'user.options'
 require 'user.keymaps'
 

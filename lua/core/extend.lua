@@ -24,7 +24,7 @@ require('lazy').setup {
   { import = 'lsp' },
 
   -- Completions
-  { enabled = true, name = 'cmp', 'hrsh7th/nvim-cmp' },
+  -- { enabled = true, name = 'cmp', 'hrsh7th/nvim-cmp' },
   { enabled = true, name = 'cmp-buffer', 'hrsh7th/cmp-buffer' },
   { enabled = true, name = 'cmp-cmdline', 'hrsh7th/cmp-cmdline' },
   { enabled = true, name = 'cmp-git', 'petertriho/cmp-git' },
