@@ -1,6 +1,6 @@
 return {
   'echasnovski/mini.sessions',
-  enabled = false,
+  enabled = true,
   version = false,
   config = function()
     require('mini.sessions').setup {

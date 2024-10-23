@@ -32,5 +32,5 @@ require('lazy').setup {
   { enabled = true, name = 'cmp-symfony-router', 'fbuchlak/cmp-symfony-router' },
 
   -- Completions: configs
-  { import = 'completions' },
+  { import = 'cmp' },
 }
