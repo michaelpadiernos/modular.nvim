@@ -27,6 +27,8 @@ return {
           --
           -- mini.tabline
           MiniTablineFill = { bg = Usr_bg},
+          MiniTablineCurrent = { fg = Usr_bg, bg = Usr_accent },
+          MiniTablineVisible = { fg = Usr__fg, bg = Usr_bg },
           --
           -- mini.statusline
           -- modes
