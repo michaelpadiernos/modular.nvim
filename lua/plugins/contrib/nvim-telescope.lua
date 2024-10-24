@@ -2,7 +2,7 @@ return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
   branch = '0.1.x',
-  dependencies = { 
+  dependencies = {
 	'nvim-lua/plenary.nvim',
 	{ -- If encountering errors, see telescope-fzf-native README for installation instructions
 	  'nvim-telescope/telescope-fzf-native.nvim',
@@ -20,7 +20,7 @@ return {
 	{ 'nvim-telescope/telescope-ui-select.nvim' },
 
 	-- Useful for getting pretty icons, but requires a Nerd Font.
-	{ 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },	  
+	{ 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   },
   config = function()
 	-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -44,22 +44,40 @@ return {
 
 	-- [[ Configure Telescope ]]
 	-- See `:help telescope` and `:help telescope.setup()`
-	require('telescope').setup {
-	  -- You can put your default mappings / updates / etc. in here
-	  --  All the info you're looking for is in `:help telescope.setup()`
-	  --
-	  -- defaults = {
-	  --   mappings = {
-	  --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-	  --   },
-	  -- },
-	  -- pickers = {}
-	  extensions = {
-		['ui-select'] = {
-		  require('telescope.themes').get_dropdown(),
-		},
-	  },
-	}
+    require('telescope').setup {
+      -- You can put your default mappings / updates / etc. in here
+      --  All the info you're looking for is in `:help telescope.setup()`
+      --
+      -- defaults = {
+      --   mappings = {
+      --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+      --   },
+      -- },
+      -- pickers = {}
+
+      extensions = {
+        ['ui-select'] = {
+          require('telescope.themes').get_dropdown(),
+        },
+      },
+    }
+
+    local builtin = require('telescope.builtin')
+
+    vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+    vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
+    vim.keymap.set('n', '<leader>pws', function()
+      local word = vim.fn.expand("<cword>")
+      builtin.grep_string({ search = word })
+    end)
+    vim.keymap.set('n', '<leader><A-pws>', function()
+      local word = vim.fn.expand("<cWORD>")
+      builtin.grep_string({ search = word })
+    end)
+    vim.keymap.set('n', '<leader>gp', function()
+      builtin.grep_string({ search = vim.fn.input("Grep > ")})
+    end)
+    vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
 	-- Enable Telescope extensions if they are installed
 	pcall(require('telescope').load_extension, 'fzf')

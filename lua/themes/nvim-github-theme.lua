@@ -1,14 +1,9 @@
-local fg = '#FFFFFF'
-local bg = '#000000'
-local main_accent = '#EFE100'
-
 return {
   'projekt0n/github-nvim-theme',
   name = 'github-theme',
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
   priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
-    vim.api.nvim_set_hl(0, 'NeominimapBorder', { fg = bg })
 
     require('github-theme').setup {
       options = {
@@ -21,16 +16,26 @@ return {
       },
       groups = {
         all = {
-          Normal = { bg = bg },
-		  WinSeparator = { fg = bg, bg = bg },
-		  NeominimapBackground = { bg = bg },
-          NeominimapBorder = { fg = bg, bg = bg },
-		  CodewindowBackground = { bg = bg },
-          StatusLine = { fg = fg, bg = bg },
-		  MiniStatuslineModeNormal = { fg = bg, bg = main_accent },
-		  MiniTablineFill = { bg = bg },
-		  MiniStatuslineFilename = { bg = bg },
-		  MiniStatuslineInactive = { fg = bg, bg = bg },
+          Normal = { bg = Usr_bg },
+    		  WinSeparator = { fg = Usr_bg, bg = Usr_bg },
+    		  NeominimapBackground = { bg = Usr_bg },
+          NeominimapBorder = { fg = Usr_bg, bg = Usr_bg },
+		      CodewindowBackground = { bg = Usr_bg },
+          StatusLine = { fg = Usr_fg, bg = Usr_bg },
+          StatusLineNC = { fg = Usr_bg, bg = Usr_bg },
+          -- mini.nvim plugins
+          --
+          -- mini.tabline
+          MiniTablineFill = { bg = Usr_bg},
+          --
+          -- mini.statusline
+          -- modes
+    		  MiniStatuslineModeNormal = { fg = Usr_bg, bg = Usr_accent },
+          -- components
+          MiniStatuslineDevinfo = { fg = Usr_fg, bg = Usr__bg },
+    		  MiniStatuslineFilename = { fg = Usr_accent, bg = Usr_bg },
+          MiniStatuslineFileinfo = { fg = Usr_fg, bg = Usr__bg },
+    		  MiniStatuslineInactive = { fg = Usr_bg, bg = Usr_bg },
         },
       },
     }

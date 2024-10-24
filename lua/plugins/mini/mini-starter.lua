@@ -12,13 +12,14 @@ return {
       -- { name = 'Sessions', action = ":lua require'telescope'.extensions.sessions.sessions{}", section = 'Telescope' },
 	  { name = 'Projects', action = ':Telescope projects', section = 'Telescope'},
 	  { name = 'Recent Files', action = ':Telescope oldfiles', section = 'Telescope' },
-      { name = 'File Brower', action = ':Telescope file_browser', section = 'Telescope' },
+      { name = 'File Browser', action = ':Telescope file_browser', section = 'Telescope' },
       -- starter.sections.recent_files(10, false),
       starter.sections.recent_files(9, true),
 	  -- starter.sections.print(vim.inspect(recent_projects)),
 	  -- starter.sections.pick(),
       -- Use this if you set up 'mini.sessions'
       -- starter.sections.sessions(9, true),
+	  -- { name = 'Projects', action = ':e ~/Projects', section = 'Bookmarks' },
       -- { name = 'Addons', action = ':e ~/.config/blender/2.82/scripts/addons', section = 'Bookmarks' },
       -- { name = 'NvimPlugs', action = ':e ~/.local/share/nvim/site/pack/packer/start', section = 'Bookmarks' },
     }

@@ -40,7 +40,7 @@ return {
         end,
       },
       -- Whether to use icons by default
-      use_icons = nerd_font,
+      use_icons = Nerd_font,
       -- Whether to set Vim's settings for statusline (make it always shown)
       set_vim_settings = true,
     }
